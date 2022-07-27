@@ -4,29 +4,29 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let calculo = base * height / 2;
   return calculo;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  const resultado = string.split(" ",3)
-  return resultado
+  const resultado = string.split(" ", 3);
+  return resultado;
 }
 
 // Desafio 4
 function concatName(Array) {
-  const resultado = Array[Array.length -1] +", "+ Array[0];
-  return resultado
+  const resultado = Array[Array.length - 1] + ", " + Array[0];
+  return resultado;
 }
 
 // Desafio 5
-function footballPoints(numero1,numero2) {
-  let wins = 3
-  let ties = 1
-  resultado = wins*numero1+ties*numero2;
-  return resultado
+function footballPoints(numero1, numero2) {
+  let wins = 3;
+  let ties = 1;
+  resultado = wins * numero1 + ties * numero2;
+  return resultado;
 }
 
 // Desafio 6
@@ -87,24 +87,24 @@ function encode(string) {
     array.push(string[index]);
   }
   for (let Index = 0; Index < array.length; Index += 1) {
-   if (array[Index] === 'a'){
-    array[Index] = 1
-   }
-   else if (array[Index] === 'e'){
-   array[Index] = 2
+    if (array[Index] === 'a') {
+      array[Index] = 1
+    }
+    else if (array[Index] === 'e') {
+      array[Index] = 2
+    }
+    else if (array[Index] === 'i') {
+      array[Index] = 3
+    }
+    else if (array[Index] === 'o') {
+      array[Index] = 4
+    }
+    else if (array[Index] === 'u') {
+      array[Index] = 5
+    }
+    else { }
   }
-   else if (array[Index] === 'i'){
-    array[Index] = 3
-  }
-  else if (array[Index] === 'o'){
-    array[Index] = 4
-  }
-  else if (array[Index] === 'u'){
-    array[Index] = 5
-  }
-  else{}
-}
-return array.join('')
+  return array.join('');
 }
 
 function decode(string) {
@@ -113,30 +113,30 @@ function decode(string) {
     array.push(string[index]);
   }
   for (let index = 0; index < array.length; index += 1) {
-   if (array[index] === '1'){
-    array[index] = 'a'
-   }
-   else if (array[index] === '2'){
-   array[index] = 'e'
+    if (array[index] === '1') {
+      array[index] = 'a'
+    }
+    else if (array[index] === '2') {
+      array[index] = 'e'
+    }
+    else if (array[index] === '3') {
+      array[index] = 'i'
+    }
+    else if (array[index] === '4') {
+      array[index] = 'o'
+    }
+    else if (array[index] === '5') {
+      array[index] = 'u'
+    }
+    else { }
   }
-   else if (array[index] === '3'){
-    array[index] = 'i'
-  }
-  else if (array[index] === '4'){
-    array[index] = 'o'
-  }
-  else if (array[index] === '5'){
-    array[index] = 'u'
-  }
-  else{}
-}
-return array.join('')
+  return array.join('');
 }
 
 // Desafio 10
-function techList(tech,name) {
-  tech = tech.sort()
-  techs = []
+function techList(tech, name) {
+  tech = tech.sort();
+  techs = [];
   for (index in tech) {
     techs.push(
       {
