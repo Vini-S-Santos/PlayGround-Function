@@ -54,11 +54,21 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 // Desafio 13
-function hydrate(string) {
-
+function hydrate(str) {
+  let sum = 0;
+  let numbers = str.match(/\d+/g).map(Number);
+  for (var i = 0; i < numbers.length; i++) {
+      sum += numbers[i]
+  }
+  if (sum === 1) {
+    return sum + ' ' + 'copo de água'
+    
+  }
+  else {
+    return sum + ' ' + 'copos de água'
+  }
 
 }
-
 module.exports = {
   generatePhoneNumber,
   hydrate,
