@@ -11,13 +11,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  const resultado = string.split(" ", 3);
+  const resultado = string.split(" ", 3); //palavra.separa(separador ex "", limit da array)
   return resultado;
 }
 
 // Desafio 4
 function concatName(Array) {
-  const resultado = Array[Array.length - 1] + ", " + Array[0];
+  const resultado = Array[Array.length - 1] + ", " + Array[0]; // array.lenght - na ultima posição + array na primeira posição
   return resultado;
 }
 
@@ -34,12 +34,12 @@ function highestCount(Array) {
   let maior = Array[0];
   let cont = 0;
 
-  for (let index = 0; index < Array.length; index += 1) {
+  for (let index = 0; index < Array.length; index += 1) { // quando o array[index] for maior que o setado na let maior armazene em maior
     if (Array[index] > maior) {
       maior = Array[index];
     }
   }
-  for (let i = 0; i < Array.length; i += 1) {
+  for (let i = 0; i < Array.length; i += 1) { //quando o valor do array[index] for estritamente maior que o meu let maior conte +1 no let cont
     if (maior === Array[i]) {
       cont += 1;
     }
@@ -49,8 +49,8 @@ function highestCount(Array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let presa = mouse;
-  posicaoCat1 = Math.abs(cat1 - presa);
-  posicaoCat2 = Math.abs(cat2 - presa);
+  posicaoCat1 = Math.abs(cat1 - presa);    //armazena o valor absoluto de cat1 - presa
+  posicaoCat2 = Math.abs(cat2 - presa);    //armazena o valor absoluto de cat2 - presa
 
   if (posicaoCat1 > posicaoCat2) {
     return 'cat2';
@@ -135,21 +135,21 @@ function decode(string) {
 
 // Desafio 10
 function techList(tech, name) {
-  tech = tech.sort();
-  techs = [];
-  for (index in tech) {
-    techs.push(
+  tech = tech.sort();  //tech = ela mesma ordenada
+  techs = [];     // armazena techs em array
+  for (index in tech) {  // laço de repetição de index em tech
+    techs.push(          // empurrando no array re techs
       {
-        tech: tech[index],
+        tech: tech[index],    // empurrando com a estrutura de objeto
         name: name,
       }
     )
   }
-  if (tech.length === 0) {
+  if (tech.length === 0) {    // se o tamanho da array de tech for igual a 0 retornar vazio
     return 'Vazio!';
   }
   else {
-    return techs;
+    return techs;              //se não retorne o array de objetos techs
   }
 }
 

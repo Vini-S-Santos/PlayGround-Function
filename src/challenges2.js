@@ -42,7 +42,7 @@ function triangleCheck(lineA, lineB, lineC) {
     soma = true;
   }
 
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) { //math.abs retorna o numero absoluto
     subitracao = true;
   }
 
@@ -56,9 +56,9 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(str) {
   let sum = 0;
-  let numbers = str.match(/\d+/g).map(Number);
-  for (var i = 0; i < numbers.length; i++) {
-      sum += numbers[i]
+  let numbers = str.match(/\d+/g).map(Number); //string.procura digito (0-9).mapeia (transforma em numero)
+  for (var i = 0; i < numbers.length; i++) { //percorre o array numbers
+      sum += numbers[i] // soma a cada loop  o numero de sum + o index de numbers
   }
   if (sum === 1) {
     return sum + ' ' + 'copo de água'
